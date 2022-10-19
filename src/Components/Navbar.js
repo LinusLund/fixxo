@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from '../assets/images/logo.svg'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -8,17 +9,17 @@ const Navbar = () => {
             <img src={Logo} alt="Logo"/>
 
             <div className='navLinks'>                
-                <a className='navLink' href="#">Home</a>
-                <a className='navLink' href="#">Categories</a>
-                <a className='navLink' href="#">Products</a>
-                <a className='navLink' href="#">Contacts</a>
+                <NavLink className='navLink' to="/">Home</NavLink>
+                <NavLink className='navLink' to='/Categories'>Categories</NavLink>
+                <NavLink className='navLink' to='/Products'>Products</NavLink>
+                <NavLink className='navLink' to='/contacts'>Contacts</NavLink>
             </div>
 
             <div className ='menu-icons'>
-                <a class="menu-link" href="#"><i class="fa-regular fa-search"></i></a>
-                <a class="menu-link" href="#"><i class="fa-regular fa-repeat"></i></a>
-                <a class="menu-link" href="#"><i class="fa-regular fa-heart"></i></a>
-                <a class="menu-link" href="#"><i class="fa-regular fa-bag-shopping"></i></a>  
+                <NavLink class="menu-link" to="/Search"><i class="fa-regular fa-search"></i></NavLink>
+                <NavLink class="menu-link" to="#"><i class="fa-regular fa-repeat"></i></NavLink>
+                <NavLink class="menu-link" to="#"><i class="fa-regular fa-heart"></i></NavLink>
+                <NavLink class="menu-link" to="#"><i class="fa-regular fa-bag-shopping"></i></NavLink>  
             </div>
 
         </div>
