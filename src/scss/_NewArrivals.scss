@@ -1,0 +1,142 @@
+.__newarrivals
+{
+    padding-top:6rem;
+    padding-bottom:6rem;
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:start;
+    
+
+
+     .shopnowarrival
+    {
+        position:relative;
+        margin-left:0;
+    }
+
+     .arrival-headline
+    {
+        position: absolute;
+        font-weight: bold;
+        bottom:15.5rem;
+        left:2.8rem;
+        width:3rem;
+
+    }
+    .winterclearance
+    {
+        position:relative;
+        margin-right:0;
+    }
+     .winterclearance .saledetails
+    {
+        position: absolute;
+        font-weight: bold;
+        font-size: 3.2rem;
+        width:30rem;
+        top:9rem;
+        left:3.5rem;
+    }
+     .winterclearance .breadtext
+    {
+        position:absolute;
+        text-align: start;
+        bottom: 13rem;
+        left:3.7rem;
+        width:35%;
+
+    }
+    .winterclearance button
+    {
+        position:absolute;
+        bottom: 10rem;
+        left:3.7rem;
+        width:12rem;
+        background-color: black;
+        color:white;
+    }
+
+    .shopnowarrival button
+    {
+        position:absolute;
+        bottom: 10rem;
+        left:3rem;
+        background-color: black;
+        color:white;
+        width:12rem;
+    }
+
+    .shopnowarrival button .top-left
+    {
+        background-color: #000;
+        position:absolute;
+        height:1rem;
+        width:1rem;
+        top:7px;
+        left:8px;
+        border: solid 1px #fff;
+        border-right-color: #000;
+        border-bottom-color:#000;
+    }
+
+    .shopnowarrival button .bottom-right
+    {
+        background-color: #000;
+        border-left-color: #000;
+        border-top-color:#000;
+        position:absolute;
+        height:1rem;
+        width:1rem;
+        bottom:7px;
+        right:8px;
+        border-bottom: 1px solid #FFF;
+        border-right: 1px solid #FFF; 
+    }
+
+    .winterclearance button .top-left
+    {
+        background-color: #000;
+        position:absolute;
+        height:1rem;
+        width:1rem;
+        top:7px;
+        left:8px;
+        border: solid 1px #fff;
+        border-right-color: #000;
+        border-bottom-color:#000;
+
+    }
+
+    .winterclearance button .bottom-right
+    {
+        background-color: #000;
+        border-left-color: #000;
+        border-top-color:#000;
+        position:absolute;
+        height:1rem;
+        width:1rem;
+        bottom:7px;
+        right:8px;
+        border-bottom: 1px solid #FFF;
+        border-right: 1px solid #FFF; 
+    }
+
+    button:hover
+    {
+        background-color: #FFF;
+        color:#000;
+        transition:0.2s ease-in-out;
+
+        .bottom-right
+        {
+            display:none;
+        }
+
+        .top-left
+        {
+           display: none;
+        }
+    }
+}

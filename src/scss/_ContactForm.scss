@@ -1,0 +1,65 @@
+.commentForm 
+{
+    margin-top:5rem;
+    
+    h5
+    {
+        margin-left: 25.3rem;
+        margin-bottom: 2rem;
+        font-weight: bold;
+    }
+
+     .contact_container
+    {
+        position:relative;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        gap:1.7rem;
+        
+    }
+      .comment_container
+    {
+       
+        position:relative;
+        display:flex;
+        justify-content: space-evenly;
+        align-items:center;
+        text-align: start;
+        
+    }
+
+      .btn-theme
+    {
+        font-weight: bold;
+        margin-left:25.2rem;
+        bottom:0;
+        padding: 0.5rem 2rem;
+        background-color:#FF7373;
+        width:15rem;
+        height:3rem;
+        color:white;
+        border-radius: 0%;
+        
+    }
+
+    #comment_name
+    {
+        width:33.625rem;
+        height:3.125rem;
+          
+    }
+    
+    #comment_email
+    {
+        width:33.625rem;
+        height:3.125rem;
+    }
+    
+    #comment_comment
+    {
+        
+        width:69.375rem;
+        height:8.75rem;
+    }
+}
