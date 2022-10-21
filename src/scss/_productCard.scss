@@ -1,0 +1,135 @@
+.card
+{
+   border:none;
+   
+   .QuickButton{
+    display:none;
+    position:absolute;
+    font-weight: bold;
+    border:none;
+    text-align: center;
+    text-decoration: none;
+    padding-top:0.7rem;
+    bottom:0;
+    height:3rem;
+    width:100%;
+    background-color: #FF7373;
+    color:#fff;
+}
+
+
+
+.QuickButton .top-left
+{
+    background-color: #FF7373;
+    position:absolute;
+    height:1rem;
+    width:1rem;
+    top:7px;
+    left:8px;
+    border: solid 1px #fff;
+    border-right-color: #FF7373;
+    border-bottom-color:#FF7373;
+}
+
+.QuickButton .bottom-right
+{
+    background-color: #FF7373;
+    border-left-color: #FF7373;
+    border-top-color:#FF7373;
+    position:absolute;
+    height:1rem;
+    width:1rem;
+    bottom:7px;
+    right:8px;
+    border-bottom: 1px solid #FFF;
+    border-right: 1px solid #FFF; 
+}
+   .img 
+   {
+    height:210px;
+    width:255px;
+    background-color: rgb(194, 201, 201);
+    position:relative;
+   }
+   .card-body
+   {
+    text-align: center;
+    width:255px;
+   }
+
+   .card-text
+   {
+    font-size:13px;
+    font-weight: 500;
+    color:darkgray;
+   }
+
+   .card-title
+   {
+    font-size:18px;
+    font-weight: bold;
+   }
+
+   .card-stars
+   {
+      color:#FF7373; 
+   }
+
+   .card-menu
+    {
+    position:absolute;
+    top:10px;
+    right:10px;
+    display:none;
+   
+
+
+    }
+
+    .card-menu .menu-link
+    {
+        background-color: white;
+        color: black;
+        width:36px;
+        height:36px;
+        margin-bottom: 25px;
+        border-radius:50%;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        margin-bottom:0.8rem;
+        box-shadow: 0 0 6px 4px  rgb(170, 165, 165);
+        position:relative;
+        text-decoration: none;
+        border:none;
+    }
+
+    .card-menu .menu-link:hover
+    {
+        color:white;
+        background-color: black;
+        text-decoration:none;
+        transition: 0.3s ease-in;
+    }
+
+}
+
+.card:hover .card-menu
+{
+    display:block;
+    transition: 0.3s ease-in-out;
+    
+  
+}
+
+.card:hover .QuickButton
+{
+    display:flex;
+    justify-content: center;
+    transition: 0.3 ease-in-out;
+    
+}
+
+
+

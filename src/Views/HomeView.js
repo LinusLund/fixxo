@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar';
 import Showcase from '../Components/Showcase';
 import NewArrivals from '../Components/NewArrivals';
 import Footer from '../Components/Footer';
+import FeaturedProducts from '../Components/FeaturedProducts';
 
 function HomeView() {
   return (
@@ -10,7 +11,10 @@ function HomeView() {
         <Navbar />
         <Showcase />
         <NewArrivals />
+        <FeaturedProducts/>
         <Footer />
+
+
     </>
   )
 }

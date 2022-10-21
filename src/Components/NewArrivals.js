@@ -7,7 +7,7 @@ import ShopButton from './ShopButton';
 function NewArrivals() {
   return (
     
-    <section className="__newarrivals border">
+    <section className="__newarrivals">
 
         <div className="winterclearance">
             <img src= {WomanHeadHand} alt="woman holding head"/>
