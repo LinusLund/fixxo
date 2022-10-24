@@ -1,16 +1,20 @@
+
 .card
 {
    border:none;
+   width:255px;
+   
+  
    
    .QuickButton{
-    display:none;
+    visibility:hidden;
     position:absolute;
     font-weight: bold;
     border:none;
     text-align: center;
     text-decoration: none;
     padding-top:0.7rem;
-    bottom:0;
+    bottom:-0.5rem;
     height:3rem;
     width:100%;
     background-color: #FF7373;
@@ -47,15 +51,17 @@
 }
    .img 
    {
-    height:210px;
-    width:255px;
-    background-color: rgb(194, 201, 201);
+    width:100%;
+    object-fit: cover;
+    height:13.125rem;
     position:relative;
+
    }
    .card-body
    {
     text-align: center;
-    width:255px;
+    height:100%;
+    width:100%;
    }
 
    .card-text
@@ -79,9 +85,9 @@
    .card-menu
     {
     position:absolute;
-    top:10px;
-    right:10px;
-    display:none;
+    top:0.625rem;
+    right:0.625rem;
+    visibility: hidden;
    
 
 
@@ -91,18 +97,19 @@
     {
         background-color: white;
         color: black;
-        width:36px;
-        height:36px;
-        margin-bottom: 25px;
+        width:2.25rem;
+        height:2.25rem;
+        margin-bottom: 1.563rem;
         border-radius:50%;
         display:flex;
         justify-content: center;
         align-items:center;
         margin-bottom:0.8rem;
-        box-shadow: 0 0 6px 4px  rgb(170, 165, 165);
+        box-shadow: 0 0 0.375rem 0.25rem  rgb(170, 165, 165);
         position:relative;
         text-decoration: none;
         border:none;
+        outline:none;
     }
 
     .card-menu .menu-link:hover
@@ -117,7 +124,7 @@
 
 .card:hover .card-menu
 {
-    display:block;
+    visibility: visible;
     transition: 0.3s ease-in-out;
     
   
@@ -125,11 +132,11 @@
 
 .card:hover .QuickButton
 {
+    visibility:visible;
     display:flex;
     justify-content: center;
     transition: 0.3 ease-in-out;
     
 }
-
 
 

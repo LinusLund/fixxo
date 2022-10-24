@@ -1,21 +1,32 @@
 
 .__navbar {
     height:80px;
-    
-    position:fixed;
     align-items: center;
     width:100%;
     z-index:1;
     opacity: 1;
 
+    &--default {
+        background-color: transparent;
+    }    
+    
+    &--solid {
+        background-color: white;
+    }
+
     .container
     {
+        position:relative;
         display:flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         max-width: 1680px;
         margin-top: 0.5rem;
-    
+        
+        img {
+         position: absolute;
+         left:0;
+        }
 
         .navCategories .navCategory
         {
@@ -31,20 +42,25 @@
             transition: 0.2s ease-in-out;
         }
 
-        .menu-icons a
-        {
-            margin:0.8rem;
-            padding:0.4rem 0.6rem;
-            color: black;
-            background-color: white;
-            border-radius: 45rem;
-        
+        .menu-icons {
+            position: absolute;
+            right:0;
+                
+           a {
+                margin:0.8rem;
+                padding:0.4rem 0.6rem;
+                color: black;
+                background-color: white;
+                border-radius: 45rem;
+
+                &:hover {
+                    color:#FF7373;
+                    transition: all .2s;
+                }
+            }
+
         }
-        .menu-icons a:hover 
-        {
-            color:#FF7373;
-            transition:0.2s ease-in-out;
-        }
+         
 }
 }
 

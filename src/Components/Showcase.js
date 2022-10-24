@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import img_1 from '../assets/images/img-1.svg'
 import img_2 from '../assets/images/img-2.svg'
 import ShopButton from './ShopButton';

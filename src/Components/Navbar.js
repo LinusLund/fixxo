@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Logo from '../assets/images/logo.svg'
 import { NavLink } from 'react-router-dom'
 
@@ -16,10 +16,10 @@ const Navbar = () => {
             </div>
 
             <div className ='menu-icons'>
-                <NavLink class="menu-link" to="/Search"><i class="fa-regular fa-search"></i></NavLink>
-                <NavLink class="menu-link" to="#"><i class="fa-regular fa-repeat"></i></NavLink>
-                <NavLink class="menu-link" to="#"><i class="fa-regular fa-heart"></i></NavLink>
-                <NavLink class="menu-link" to="#"><i class="fa-regular fa-bag-shopping"></i></NavLink>  
+                <NavLink className="menu-link" to="/Search"><i className="fa-regular fa-search"></i></NavLink>
+                <NavLink className="menu-link" to="#"><i className="fa-regular fa-repeat"></i></NavLink>
+                <NavLink className="menu-link" to="#"><i className="fa-regular fa-heart"></i></NavLink>
+                <NavLink className="menu-link" to="#"><i className="fa-regular fa-bag-shopping"></i></NavLink>  
             </div>
 
         </div>
@@ -28,3 +28,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+
