@@ -21,7 +21,15 @@
             border: 1px solid #BEBEBE;
         }
 
-      
+        .validFailName {
+            border: 1px solid red;
+        }
+        .validFailEmail {
+            border: 1px solid red;
+        }
+        .validFailComment {
+            border: 1px solid red;
+        }
 
         .textarea {
             grid-column: 1 / -1

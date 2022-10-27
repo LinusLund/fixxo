@@ -258,6 +258,15 @@
   padding: 18px 20px;
   border: 1px solid #BEBEBE;
 }
+.commentForm form .validFailName {
+  border: 1px solid red;
+}
+.commentForm form .validFailEmail {
+  border: 1px solid red;
+}
+.commentForm form .validFailComment {
+  border: 1px solid red;
+}
 .commentForm form .textarea {
   grid-column: 1/-1;
 }
