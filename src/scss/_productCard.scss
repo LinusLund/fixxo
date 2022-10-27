@@ -139,4 +139,27 @@
     
 }
 
+@media (max-width:412px){
+    .container{
 
+        .card{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            
+
+            h5{
+                text-align: start;
+            }
+
+            .QuickButton{
+                visibility:visible;
+                display:block
+            }
+
+            .card-menu {
+                visibility: visible;
+            }
+        }
+    }
+}
