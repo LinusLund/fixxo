@@ -114,9 +114,8 @@ const ContactForm = () => {
         setFormErrors({...formErrors, comment: validateComment(contactForm)})
         
     }
-    //kallar handleValidation data att köra valideringen med allt som finns i contactForm.
-    //därefter skriver den antingen ut formErrors eller contactForm beroende på status på canSubmit.
 
+    //kallar handleValidation data att köra valideringen med allt som finns i contactForm.
     const handleSubmit= (e) => {
         e.preventDefault()
         handleValidationData(contactForm)    
@@ -129,7 +128,7 @@ const ContactForm = () => {
     return (
         <section className="commentForm">
             <div className="container">
-            <pre>{JSON.stringify(canSubmit)}</pre>
+           
             {
              
              canSubmit?
