@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const ContactForm = () => {
     const [contactForm, setContactForm] = useState({name: '', email:'', comment:''})
     const [formErrors, setFormErrors] = useState({})
-    const[canSubmit, setCanSubmit] = useState()
+    const [canSubmit, setCanSubmit] = useState(false)
     
 
 
@@ -24,8 +24,10 @@ const ContactForm = () => {
             else if(!regex_name.test(value.name))
             return "Please use letters and ',.'-' these characters only "
 
+            else
+            return null ;
         
-         return;   
+           
     }
 
     const validateEmail = (value) => {
@@ -36,11 +38,11 @@ const ContactForm = () => {
          return "You must enter an email"
      
         else if (!regex_email.test(value.email))
-         return "You must enter a valid e-mail address (eg. name@domain.com)"
+           return "You must enter a valid e-mail address (eg. name@domain.com)"
 
+        else
+          return null      
         
-        
-        return ;
     }
 
     const validateComment = (value) => {
@@ -52,7 +54,8 @@ const ContactForm = () => {
         else if(value.comment.length < 5)
         return "Your comment must be atleast five characters long"
 
-        return;
+        else
+        return null ;
 
 
             
@@ -65,18 +68,22 @@ const ContactForm = () => {
         errors.email = validateEmail(data)
         errors.comment = validateComment(data)
    
-       if(Object.keys(errors).length === 0)
-           setCanSubmit(true)
-       else
-           setCanSubmit(false)
         
-        return canSubmit;
+        if(errors.name === null && errors.email === null && errors.comment === null) {
+            console.log('can submit')
+            setCanSubmit(true)
+        
+        } else {
+            console.log('can not submit')
+            setCanSubmit(false)      
+        }
 
-               }
+    }
+
 // ändrar klass på inputfälten baserat på huruvida det finns felmeddelande eller inte. Scss ändrar bordern om det finns fel.
     let inputName = 'validSuccess'
         if(formErrors.name)
-        inputName = 'validFail'
+            inputName = 'validFail'
 
     let inputEmail = 'validSuccess'
         if(formErrors.email)
@@ -93,17 +100,17 @@ const ContactForm = () => {
             setContactForm({...contactForm, [id]: value})
     }
     //Spreadar formErrors och skriver över det valda fältet, ändrar inte de andra.
-    const handleKeyUpName = (e) => {
+    const handleKeyUpName = () => {
         setFormErrors({...formErrors, name: validateName(contactForm)})
         
     }
 
-    const handleKeyUpEmail = (e) => {
+    const handleKeyUpEmail = () => {
         setFormErrors({...formErrors, email: validateEmail(contactForm)})
         
     }
 
-    const handleKeyUpComment = (e) => {
+    const handleKeyUpComment = () => {
         setFormErrors({...formErrors, comment: validateComment(contactForm)})
         
     }
@@ -111,14 +118,9 @@ const ContactForm = () => {
     //därefter skriver den antingen ut formErrors eller contactForm beroende på status på canSubmit.
 
     const handleSubmit= (e) => {
-        handleValidationData(contactForm) 
         e.preventDefault()
-            if(canSubmit === false)
-                console.log(formErrors);
-            else
-                console.log(contactForm)
-        
-             return  ;
+        handleValidationData(contactForm)    
+             
      }
 
      
@@ -127,11 +129,12 @@ const ContactForm = () => {
     return (
         <section className="commentForm">
             <div className="container">
+            <pre>{JSON.stringify(canSubmit)}</pre>
             {
-
+             
              canSubmit?
 
-                     (<div class="container-sm style=d-flex">Thank you for your comment!</div>)
+                     (<div className="container-sm style= d-flex justify-content-center align-items-center">Thank you for your comment!</div>)
                     
                  :
                  (  
@@ -163,7 +166,7 @@ const ContactForm = () => {
         </div>
     </section> 
 
-)
+    )
 }                                    
                 
 
