@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const ContactForm = () => {
-    const [contactForm, setContactForm] = useState({name: '', email:'', comment:''})
+    const [contactForm, setContactForm] = useState({name: '', email:'', comments:''})
     const [formErrors, setFormErrors] = useState({})
     const [canSubmit, setCanSubmit] = useState(false)
     
@@ -25,7 +25,7 @@ const ContactForm = () => {
             return "Please use letters and ',.'-' these characters only "
 
             else
-            return null ;
+            return null  ;
         
            
     }
@@ -47,11 +47,11 @@ const ContactForm = () => {
 
     const validateComment = (value) => {
          
-        if(!value.comment)
+        if(!value.comments)
         return "You must enter a comment"
        
 
-        else if(value.comment.length < 5)
+        else if(value.comments.length < 5)
         return "Your comment must be atleast five characters long"
 
         else
@@ -60,25 +60,43 @@ const ContactForm = () => {
 
             
     }
-    
+    //tar info från de andra valideringsmetoderna och sätter upp en array med fel. är den tom så Postar den innehållet i formuläret.
     const handleValidationData =(data) => {
         const  errors={}
 
         errors.name = validateName(data)
         errors.email = validateEmail(data)
-        errors.comment = validateComment(data)
+        errors.comments = validateComment(data)
    
         
-        if(errors.name === null && errors.email === null && errors.comment === null) {
-            console.log('can submit')
-            setCanSubmit(true)
+        if(errors.name === null && errors.email === null && errors.comments === null) {
+
+            let json = JSON.stringify(data)
+            console.log(json)
+    
+            fetch('https://win22-webapi.azurewebsites.net/api/contactform', {
+            method: 'POST' ,
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: json
+         })
+         .then(res => {
+            console.log(res.status)
         
-        } else {
-            console.log('can not submit')
-            setCanSubmit(false)      
-        }
+            if(res.status === 200) {
+                setCanSubmit(true)
+            }
+    
+            else
+                setCanSubmit(false)
+                
+         })
+
+      
 
     }
+}
 
 // ändrar klass på inputfälten baserat på huruvida det finns felmeddelande eller inte. Scss ändrar bordern om det finns fel.
     let inputName = 'validSuccess'
@@ -90,7 +108,7 @@ const ContactForm = () => {
             inputEmail ='validFail'
 
     let inputComment = 'validSuccess'
-            if(formErrors.comment)
+            if(formErrors.comments)
                 inputComment ='validFail'
 
 //fyller på contactForm med värden från inputfälten
@@ -111,20 +129,16 @@ const ContactForm = () => {
     }
 
     const handleKeyUpComment = () => {
-        setFormErrors({...formErrors, comment: validateComment(contactForm)})
+        setFormErrors({...formErrors, comments: validateComment(contactForm)})
         
     }
 
     //kallar handleValidation data att köra valideringen med allt som finns i contactForm.
     const handleSubmit= (e) => {
         e.preventDefault()
-        handleValidationData(contactForm)    
-             
-     }
+        handleValidationData(contactForm)
 
-     
-
-    
+    }       
     return (
         <section className="commentForm">
             <div className="container">
@@ -133,7 +147,10 @@ const ContactForm = () => {
              
              canSubmit?
 
-                     (<div className="container-sm style= d-flex justify-content-center align-items-center">Thank you for your comment!</div>)
+                     (<div className="alert alert-success text-center" role="alert">
+                        <h3>Thank you for your comment!</h3>
+                        <p>Now go buy something, this website isnt free you know.</p>
+                     </div>)
                     
                  :
                  (  
@@ -150,8 +167,8 @@ const ContactForm = () => {
                         </div>
 
                         <div className='textarea'>
-                            <textarea className={inputComment} id='comment' placeholder="Comments" value= {contactForm.comment} onChange={handleChange} onKeyUp={handleKeyUpComment}></textarea>
-                            <div className='errorMessage'>{formErrors.comment}</div> 
+                            <textarea className={inputComment} id='comments' placeholder="Comments" value= {contactForm.comments} onChange={handleChange} onKeyUp={handleKeyUpComment}></textarea>
+                            <div className='errorMessage'>{formErrors.comments}</div> 
                         </div>
 
                         <div>
@@ -167,6 +184,6 @@ const ContactForm = () => {
 
     )
 }                                    
-                
+
 
 export default ContactForm
