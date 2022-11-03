@@ -346,7 +346,7 @@
 
 .card {
   border: none;
-  width: 255px;
+  width: 20.688rem;
 }
 .card .QuickButton {
   visibility: hidden;
@@ -389,7 +389,6 @@
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 13.125rem;
   position: relative;
 }
 .card .card-body {

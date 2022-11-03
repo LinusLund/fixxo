@@ -38,7 +38,7 @@ const fetchFeaturedProducts = async () => {
 
  }
 fetchFeaturedProducts()
-},[setProducts])
+},[])
 
 
 
