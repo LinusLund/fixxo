@@ -1,18 +1,16 @@
+.HomePage .__navbar {
+    background: rgb(230,230,230);
+    background: linear-gradient(90deg, rgba(230,230,230,0.98) 17%, rgba(245,245,245,1) 100%);
+}
 
 .__navbar {
     height:80px;
     align-items: center;
+    justify-content: center;
     width:100%;
     z-index:1;
     opacity: 1;
-
-    &--default {
-        background-color: transparent;
-    }    
     
-    &--solid {
-        background-color: white;
-    }
 
     .container
     {
@@ -21,19 +19,25 @@
         justify-content: center;
         align-items: center;
         max-width: 1680px;
-        margin-top: 0.5rem;
+        
         
         img {
          position: absolute;
          left:0;
+         top:0.5rem;
         }
 
+        .navCategories
+        {
+            margin-top:1.5rem;
+        }
         .navCategories .navCategory
         {
-        color: black;
+        color:black;
         margin:1.2rem;
         text-decoration: none;
         font-weight: bold;
+        
         }
 
         .navCategories .navCategory:hover
@@ -45,6 +49,7 @@
         .menu-icons {
             position: absolute;
             right:0;
+            margin-top:1.5rem;
                 
            a {
                 margin:0.8rem;

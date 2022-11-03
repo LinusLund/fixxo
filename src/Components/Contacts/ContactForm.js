@@ -4,6 +4,7 @@ const ContactForm = () => {
     const [contactForm, setContactForm] = useState({name: '', email:'', comments:''})
     const [formErrors, setFormErrors] = useState({})
     const [canSubmit, setCanSubmit] = useState(false)
+    const [failedSubmit, setFailedSubmit] = useState()
     
 
 
@@ -86,11 +87,12 @@ const ContactForm = () => {
         
             if(res.status === 200) {
                 setCanSubmit(true)
+                
             }
     
             else
                 setCanSubmit(false)
-                
+                setFailedSubmit(true)
          })
 
       
@@ -144,16 +146,15 @@ const ContactForm = () => {
             <div className="container">
            
             {
-             
              canSubmit?
-
+                    
                      (<div className="alert alert-success text-center" role="alert">
                         <h3>Thank you for your comment!</h3>
                         <p>Now go buy something, this website isnt free you know.</p>
-                     </div>)
-                    
-                 :
-                 (  
+                     </div>) : (<></>)
+            }
+
+                
                     <>
                         <h5>Come in contact with us</h5>
                         <form onSubmit={handleSubmit} noValidate>
@@ -176,9 +177,9 @@ const ContactForm = () => {
                         </div>
                     </form>
                 </>
-                 )
-            }         
-             
+                 
+                     
+   
         </div>
     </section> 
 

@@ -1,7 +1,8 @@
 import React from 'react';
 import ProductCard from './ProductCard'
 
-const FeaturedProducts = ({title, products}) => {
+
+const FeaturedProducts = ({title, products = []}) => {
 
   return (
     <>
