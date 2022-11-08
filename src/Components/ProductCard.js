@@ -9,9 +9,9 @@ const ProductCard = ({product}) => {
  
   return (
 
-    <div className="col">
+    <div className="col ">
         <div className="card">
-            <div className="img border">
+            <div className="img">
                 <img src={product.imageName} alt= {product.name} />
                 <div className="card-menu">
                     <button  className = 'menu-link'><i className="fa-regular fa-code-compare"></i></button>

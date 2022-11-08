@@ -7,6 +7,9 @@ import FeaturedProducts from '../Components/FeaturedProducts';
 import PamelaSection from '../Components/PamelaSection';
 import { ProductContext } from '../contexts/context';
 import { useContext } from 'react';
+import GridSection from '../Components/GridSection';
+import GridSection2 from '../Components/GridSection2';
+
 const HomeView = () => {
 
   const productContext = useContext(ProductContext)
@@ -18,6 +21,8 @@ const HomeView = () => {
         <NewArrivals />
         <FeaturedProducts title ="Featured Products" products={productContext.featuredProducts}/>
         <PamelaSection />
+        <GridSection products={productContext.gridProducts} /> 
+        <GridSection2 products={productContext.gridProducts} />
         <Footer />
 
 

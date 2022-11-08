@@ -11,7 +11,7 @@ const FeaturedProducts = ({title, products = []}) => {
             <div className="container">
                 <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
                     {
-                        products.map(product => <ProductCard key={product.artnmr} product = {product} />)
+                        products.map(product => <ProductCard key={product.artnr} product = {product} />)
                     }
 
                 </div>

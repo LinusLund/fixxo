@@ -347,6 +347,7 @@
 .card {
   border: none;
   width: 20.688rem;
+  height: 15.188;
 }
 .card .QuickButton {
   visibility: hidden;
@@ -400,6 +401,7 @@
   font-size: 13px;
   font-weight: 500;
   color: darkgray;
+  margin-bottom: 0;
 }
 .card .card-title {
   font-size: 18px;
@@ -413,6 +415,9 @@
   top: 0.625rem;
   right: 0.625rem;
   visibility: hidden;
+}
+.card .card-menu .card-price {
+  margin-bottom: 0;
 }
 .card .card-menu .menu-link {
   background-color: white;
@@ -499,6 +504,7 @@
 
 .container {
   max-width: 1680px;
+  margin-bottom: 3rem;
 }
 .container .img-showcase {
   width: 100%;
@@ -635,4 +641,119 @@
   left: 4rem;
   font-weight: bold;
   width: 20rem;
+}
+
+.wrapper {
+  max-width: 1680px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 4rem;
+}
+
+.BoxContainer {
+  width: 100%;
+  margin-left: 6.7rem;
+}
+
+.gridLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  row-gap: 0;
+  text-align: start;
+  margin-right: 6.7rem;
+}
+
+.wrapper2 {
+  max-width: 1680px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 4rem;
+  margin-left: 6.7rem;
+}
+
+.BoxContainer2 {
+  width: 100%;
+  margin-right: 6.1rem;
+}
+
+.gridLayout2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  row-gap: 0;
+  text-align: start;
+  margin-left: 6.7rem;
+}
+
+.bigBox {
+  width: 52rem;
+  height: 51.8rem;
+  background-color: #bebebe;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bigBox .saleHeadLine {
+  color: #fff;
+  font-size: 45px;
+  font-weight: bold;
+}
+.bigBox button {
+  position: absolute;
+  bottom: 15rem;
+  left: 19rem;
+  background-color: #fff;
+  color: black;
+  width: 12rem;
+  border: none;
+  height: 3.5rem;
+  font-weight: bold;
+  font-size: 18px;
+}
+.bigBox .top-left {
+  background-color: #fff;
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  top: 7px;
+  left: 8px;
+  border: solid 1px #000;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+}
+.bigBox .bottom-right {
+  background-color: #fff;
+  border-left-color: #fff;
+  border-top-color: #fff;
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  bottom: 7px;
+  right: 8px;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+}
+.bigBox button:hover {
+  background-color: #000;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+.bigBox button:hover .top-left {
+  background-color: #000;
+  border: solid 1px #fff;
+  border-right-color: #000;
+  border-bottom-color: #000;
+}
+.bigBox button:hover .bottom-right {
+  background-color: #000;
+  border-left-color: #000;
+  border-top-color: #000;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
 }/*# sourceMappingURL=app.min.css.map */

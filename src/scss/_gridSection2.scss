@@ -1,0 +1,25 @@
+
+    .wrapper2 {
+        max-width: 1680px;
+        display:flex;
+        justify-content: space-between;
+        align-items: start;
+        gap:4rem;
+        margin-left:6.7rem;
+    }
+
+    .BoxContainer2 {
+    width:100%;
+    margin-right:6.1rem;
+
+    }
+    .gridLayout2 {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 0;
+        text-align: start;
+        margin-left:6.7rem;
+        
+    }
+

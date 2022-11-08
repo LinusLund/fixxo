@@ -18,6 +18,8 @@ function App() {
 
     featuredProducts:[],
 
+    gridProducts:[]
+
   })
 
   useEffect (() => {
@@ -38,7 +40,16 @@ const fetchFeaturedProducts = async () => {
 
  }
 fetchFeaturedProducts()
+
+const fetchGridProducts = async () => {
+  let result = await fetch ('https://win22-webapi.azurewebsites.net/api/products?take=4')
+   setProducts({...products, gridProducts: await result.json()})
+
+ }
+fetchGridProducts()
+
 },[])
+
 
 
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import PamelaContour from '../assets/images/PamelaContour.svg';
 import GirlPosing from '../assets/images/GirlPosing.svg';
-import ShopButton from './ShopButton'
+
 
 
 
@@ -19,7 +19,7 @@ const PamelaSection = () => {
             <div className = 'conscious'>
                 <img src= {GirlPosing} alt="Girl happy shop at our sale"/>
                 <h1 className = 'img_headline'> Let's Be Conscious</h1>
-                <button className = 'consciousBtn' type='submit'><span className="top-left"></span>Flash Sale<span className = "bottom-right"></span></button>
+                <button className = 'flash_sale' type='submit'><span className="top-left"></span>Flash Sale<span className = "bottom-right"></span></button>
             </div>
           </div>
         </section>

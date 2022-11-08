@@ -3,7 +3,7 @@
 {
    border:none;
    width:20.688rem;
-   
+   height:15.188;
   
    
    .QuickButton{
@@ -68,6 +68,7 @@
     font-size:13px;
     font-weight: 500;
     color:darkgray;
+    margin-bottom:0;
    }
 
    .card-title
@@ -88,6 +89,9 @@
     right:0.625rem;
     visibility: hidden;
    
+    .card-price {
+        margin-bottom:0;
+    }
 
 
     }
