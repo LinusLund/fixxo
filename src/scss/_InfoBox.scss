@@ -1,0 +1,31 @@
+.boxContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin:1rem;
+
+
+    .infoBox {
+      display:inline-block;
+      grid-template-columns: 100%;
+      text-align: center;
+      
+
+    }
+
+    button {
+    border:none;
+    outline:none;
+    border-radius: 45rem;
+    height:60px;
+    width:60px;
+    background-color: white;
+    box-shadow: 0 0 0.375rem 0.25rem  rgb(170, 165, 165)
+    }
+
+    .boxHead {
+        font-weight: bold;
+    }
+
+
+}

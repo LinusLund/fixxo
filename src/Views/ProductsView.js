@@ -9,12 +9,13 @@ import { useContext } from 'react';
 
 const ProductsView = () => {
 
-  const productContext = useContext(ProductContext)
+  const products = useContext(ProductContext)
+
   return (
      <>
      <Navbar />
      <BreadcrumbSection />
-     <FeaturedProducts title="All Products" products={productContext.allProducts} />
+     <FeaturedProducts title="All Products" products={products} />
      <Footer />
     </>
   )

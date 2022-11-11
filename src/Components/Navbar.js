@@ -17,9 +17,17 @@ const Navbar = () => {
 
             <div className ='menu-icons'>
                 <NavLink className="menu-link" to="/Search"><i className="fa-regular fa-search"></i></NavLink>
-                <NavLink className="menu-link" to="#"><i className="fa-regular fa-repeat"></i></NavLink>
-                <NavLink className="menu-link" to="#"><i className="fa-regular fa-heart"></i></NavLink>
-                <NavLink className="menu-link" to="#"><i className="fa-regular fa-bag-shopping"></i></NavLink>  
+                <NavLink className="menu-link" to="#"><i className="fa-regular fa-code-compare"></i></NavLink>
+
+                <NavLink className="menu-link" to="#">
+                  <span className = "wishingBadge">0</span>
+                  <i className="fa-regular fa-heart"></i>
+                </NavLink>
+
+                <NavLink className="menu-link" to="#">
+                  <span className = "shoppingBadge">1</span>
+                  <i className="fa-regular fa-bag-shopping"></i>
+                </NavLink>  
             </div>
 
         </div>
